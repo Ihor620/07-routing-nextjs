@@ -13,9 +13,9 @@ export default function FilterLayout({
   modal,
 }: FilterLayoutProps) {
   return (
-    <div className={css.layout}>
+    <div className={css.container}>
       <aside className={css.sidebar}>{sidebar}</aside>
-      <main className={css.main}>{children}</main>
+      <div className={css.notesWrapper}>{children}</div>
       {modal}
     </div>
   );
