@@ -1,5 +1,5 @@
 import { fetchNoteById } from "@/lib/api";
-import ModalIntercepted from "./ModalIntercepted";
+import ModalIntercepted from "./NotePreview.client";
 
 interface Props {
   params: Promise<{ id: string }>;

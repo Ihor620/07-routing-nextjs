@@ -9,7 +9,7 @@ interface Props {
   note: Note;
 }
 
-export default function ModalIntercepted({ note }: Props) {
+export default function NotePreviewClient({ note }: Props) {
   const router = useRouter();
 
   return (

@@ -1,8 +1,8 @@
 "use client";
 
 import { useQuery } from "@tanstack/react-query";
-import { fetchNotes } from "../../../../lib/api";
-import NoteList from "../../../../components/NoteList/NoteList";
+import { fetchNotes } from "@/lib/api";
+import NoteList from "@/components/NoteList/NoteList";
 import css from "./NotesFilter.module.css";
 
 interface Props {
