@@ -3,20 +3,19 @@ import {
   HydrationBoundary,
   QueryClient,
 } from "@tanstack/react-query";
-import { fetchNotes } from "../../../../lib/api";
+import { fetchNotes } from "@/lib/api";
 import NotesFilterClient from "./NotesFilter.client";
 
 interface PageProps {
-  params: Promise<{ tag?: string[] }>;
+  params: Promise<{ slug: string[] }>;
 }
 
 export const dynamic = "force-dynamic";
 
 export default async function FilterPage({ params }: PageProps) {
-  const { tag } = await params;
+  const { slug } = await params;
 
-  const tagValue = tag?.[0];
-
+  const tagValue = slug?.[0];
   const activeTag =
     !tagValue || tagValue === "all" ? undefined : tagValue;
 
